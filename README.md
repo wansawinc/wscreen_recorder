@@ -1,12 +1,18 @@
+# wscreen_recorder
 
-# ED Flutter Screen Recorder
+Screen recorder plugin for Flutter. Supports IOS and Android devices. It does not work on the IOS emulator!!!!
 
-Screen recorder plugin for Flutter. Supports IOS and Android devices.It does not work on the IOS emulator!!!!
+## Who made it? It's Amjid ;)
 
-## Who made it? It's Eren ;)
+**Author: Amjid** - [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amjidkhanv)
 
+[![pubdev](https://img.shields.io/badge/pub-wscreen__recorder-blue)](https://pub.dev/packages/wscreen_recorder)
 
-[![pubdev](https://img.shields.io/badge/pub-de__screen__recorder-blue)](https://pub.dev/packages/ed_screen_recorder)
+---
+
+**Fork of** https://github.com/endmr11/ed_screen_recorder
+
+---
 
 ## Ekler
 
@@ -15,18 +21,18 @@ android/app/build.gradle
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.github.HBiSoft:HBRecorder:3.0.1'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 }
 ```
 
 android/app/src/main/AndroidManifest.xml
 ```xml
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example">
+    xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
 ```
 
 You only need add the permission message on the Info.plist
@@ -43,7 +49,7 @@ You only need add the permission message on the Info.plist
 ## Usage/Examples
 
 ```dart
-import 'package:screen_recorder/screen_recorder.dart';
+import 'package:wscreen_recorder/wscreen_recorder.dart';
 
 ScreenRecorder? screenRecorder;
 Map<String, dynamic>? _response;
@@ -57,7 +63,7 @@ void initState() {
   Future<void> startRecord({required String fileName}) async {
     // Directory tempDir = await getTemporaryDirectory();
     // String tempPath = tempDir.path;
-    var response = await edScreenRecorder?.startRecordScreen(
+    var response = await screenRecorder?.startRecordScreen(
       fileName: fileName,
       // `dirPathToSave` Optional. It will save the video there when you give the file path with whatever you want.
       //If you leave it blank, the Android operating system will save it to the gallery.
@@ -71,7 +77,7 @@ void initState() {
   }
 
   Future<void> stopRecord() async {
-    var response = await edScreenRecorder?.stopRecord();
+    var response = await screenRecorder?.stopRecord();
     setState(() {
       _response = response;
     });
@@ -95,7 +101,7 @@ void initState() {
             Text("Video Hash: ${_response?['videohash']}"),
             Text("Start Date: ${(_response?['startdate']).toString()}"),
             Text("End Date: ${(_response?['enddate']).toString()}"),
-            ElevatedButton(onPressed: () => startRecord(fileName: "eren"), child: const Text('START RECORD')),
+            ElevatedButton(onPressed: () => startRecord(fileName: "amjid"), child: const Text('START RECORD')),
             ElevatedButton(onPressed: () => stopRecord(), child: const Text('STOP RECORD')),
           ],
         ),
@@ -125,7 +131,9 @@ Simple, fast generation of RFC4122 UUIDs. [URL](https://pub.dev/packages/uuid)
 
 Thanks my friends Mehmet for contributed.
 
-Author: endmr11 [!["github"](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/endmr11)
+**Original Author:** endmr11 [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/endmr11)
+
+**Current Maintainer:** Amjid [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amjidkhanv)
 
 
 
@@ -139,5 +147,5 @@ Author: endmr11 [!["github"](https://img.shields.io/badge/GitHub-100000?style=fo
   
 ## Feedback
 
-If you have any feedback, please contact us at erndemir.1@gmail.com.
+If you have any feedback, please contact me.
 
