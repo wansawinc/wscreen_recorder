@@ -9,9 +9,9 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
 Flutter Screen Recorder
                        DESC
-  s.homepage         = 'https://github.com/amjidkhanv/wscreen_recorder'
+  s.homepage         = 'https://github.com/wansawinc/wscreen_recorder'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Amjid' => 'email@example.com' }
+  s.author           = { 'Amjid Dader' => 'email@example.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'

@@ -2,9 +2,9 @@
 
 Screen recorder plugin for Flutter. Supports IOS and Android devices. It does not work on the IOS emulator!!!!
 
-## Who made it? It's Amjid ;)
+## Who made it? It's Amjid Dader ;)
 
-**Author: Amjid** - [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amjidkhanv)
+**Author: Amjid Dader** - [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/wansawinc)
 
 [![pubdev](https://img.shields.io/badge/pub-wscreen__recorder-blue)](https://pub.dev/packages/wscreen_recorder)
 
@@ -133,7 +133,7 @@ Thanks my friends Mehmet for contributed.
 
 **Original Author:** endmr11 [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/endmr11)
 
-**Current Maintainer:** Amjid [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/amjidkhanv)
+**Current Maintainer:** Amjid Dader [![github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/wansawinc)
 
 
 
